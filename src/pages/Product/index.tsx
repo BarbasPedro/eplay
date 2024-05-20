@@ -4,13 +4,11 @@ import Section from '../../components/Section'
 
 import Gallery from '../../components/Gallery'
 
-import residentEvil from '../../assets/images/resident.png'
-import { useEffect, useState } from 'react'
-import { Game } from '../Home'
 import { useGetGameQuery } from '../../services/api'
 
 const Product = () => {
   const { id } = useParams()
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const { data: game } = useGetGameQuery(id!)
 
   if (!game) {
