@@ -7,8 +7,8 @@ import Card from '../../components/Card'
 
 import { usePurchaseMutation } from '../../services/api'
 
-import cartao from '../../assets/images/cartao.svg'
-import boleto from '../../assets/images/boleto.svg'
+import creditCard from '../../assets/images/cartao.svg'
+import barCode from '../../assets/images/boleto.svg'
 
 import { InputGroup, Row, TabButton } from './styles'
 
@@ -251,14 +251,14 @@ const Checkout = () => {
                 isActive={!payWithCard}
                 onClick={() => setPayWithCard(false)}
               >
-                <img src={boleto} alt="Boleto" />
+                <img src={barCode} alt="Boleto" />
                 Boleto Bancário
               </TabButton>
               <TabButton
                 isActive={payWithCard}
                 onClick={() => setPayWithCard(true)}
               >
-                <img src={cartao} alt="Cartão de Crédito" />
+                <img src={creditCard} alt="Cartão de Crédito" />
                 Cartão de Crédito
               </TabButton>
               {payWithCard ? (
