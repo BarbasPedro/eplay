@@ -184,7 +184,7 @@ const Checkout = () => {
                     value={form.values.email}
                     onChange={form.handleChange}
                     onBlur={form.handleBlur}
-                    className={checkInput('fullName') ? 'error' : ''}
+                    className={checkInput('email') ? 'error' : ''}
                   />
                 </InputGroup>
                 <InputGroup>
@@ -196,7 +196,7 @@ const Checkout = () => {
                     value={form.values.cpf}
                     onChange={form.handleChange}
                     onBlur={form.handleBlur}
-                    className={checkInput('fullName') ? 'error' : ''}
+                    className={checkInput('cpf') ? 'error' : ''}
                   />
                 </InputGroup>
               </Row>
@@ -213,7 +213,7 @@ const Checkout = () => {
                     value={form.values.deliveryEmail}
                     onChange={form.handleChange}
                     onBlur={form.handleBlur}
-                    className={checkInput('fullName') ? 'error' : ''}
+                    className={checkInput('deliveryEmail') ? 'error' : ''}
                   />
                 </InputGroup>
                 <InputGroup>
@@ -227,7 +227,9 @@ const Checkout = () => {
                     value={form.values.confirmDeliveryEmail}
                     onChange={form.handleChange}
                     onBlur={form.handleBlur}
-                    className={checkInput('fullName') ? 'error' : ''}
+                    className={
+                      checkInput('confirmDeliveryEmail') ? 'error' : ''
+                    }
                   />
                 </InputGroup>
               </Row>
@@ -263,7 +265,7 @@ const Checkout = () => {
                         value={form.values.cardOwner}
                         onChange={form.handleChange}
                         onBlur={form.handleBlur}
-                        className={checkInput('fullName') ? 'error' : ''}
+                        className={checkInput('cardOwner') ? 'error' : ''}
                       />
                     </InputGroup>
                     <InputGroup>
@@ -277,7 +279,7 @@ const Checkout = () => {
                         value={form.values.cpfCardOwner}
                         onChange={form.handleChange}
                         onBlur={form.handleBlur}
-                        className={checkInput('fullName') ? 'error' : ''}
+                        className={checkInput('cpfCardOwner') ? 'error' : ''}
                       />
                     </InputGroup>
                   </Row>
@@ -291,7 +293,7 @@ const Checkout = () => {
                         value={form.values.cardDisplayName}
                         onChange={form.handleChange}
                         onBlur={form.handleBlur}
-                        className={checkInput('fullName') ? 'error' : ''}
+                        className={checkInput('cardDisplayName') ? 'error' : ''}
                       />
                     </InputGroup>
                     <InputGroup>
@@ -303,11 +305,11 @@ const Checkout = () => {
                         value={form.values.cardNumber}
                         onChange={form.handleChange}
                         onBlur={form.handleBlur}
-                        className={checkInput('fullName') ? 'error' : ''}
+                        className={checkInput('cardNumber') ? 'error' : ''}
                       />
                     </InputGroup>
                     <InputGroup maxWidth="123px">
-                      <label htmlFor="expiresMonth">Mês do vencimento</label>
+                      <label htmlFor="expiresMonth">Mês de expiração</label>
                       <input
                         id="expiresMonth"
                         type="text"
@@ -315,11 +317,11 @@ const Checkout = () => {
                         value={form.values.expiresMonth}
                         onChange={form.handleChange}
                         onBlur={form.handleBlur}
-                        className={checkInput('fullName') ? 'error' : ''}
+                        className={checkInput('expiresMonth') ? 'error' : ''}
                       />
                     </InputGroup>
                     <InputGroup maxWidth="123px">
-                      <label htmlFor="expiresYear">Ano do vencimento</label>
+                      <label htmlFor="expiresYear">Ano de expiração</label>
                       <input
                         id="expiresYear"
                         type="text"
@@ -327,7 +329,7 @@ const Checkout = () => {
                         value={form.values.expiresYear}
                         onChange={form.handleChange}
                         onBlur={form.handleBlur}
-                        className={checkInput('fullName') ? 'error' : ''}
+                        className={checkInput('expiresYear') ? 'error' : ''}
                       />
                     </InputGroup>
                     <InputGroup maxWidth="123px">
@@ -339,7 +341,7 @@ const Checkout = () => {
                         value={form.values.cardCode}
                         onChange={form.handleChange}
                         onBlur={form.handleBlur}
-                        className={checkInput('fullName') ? 'error' : ''}
+                        className={checkInput('cardCode') ? 'error' : ''}
                       />
                     </InputGroup>
                   </Row>
@@ -352,7 +354,7 @@ const Checkout = () => {
                         value={form.values.installments}
                         onChange={form.handleChange}
                         onBlur={form.handleBlur}
-                        className={checkInput('fullName') ? 'error' : ''}
+                        className={checkInput('installments') ? 'error' : ''}
                       >
                         <option>1x de R$200,00</option>
                         <option>2x de R$200,00</option>
