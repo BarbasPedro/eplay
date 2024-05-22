@@ -43,6 +43,7 @@ export const CartButton = styled.a`
 
   img {
     margin-left: 16px;
+    cursor: pointer;
   }
 
   span {
