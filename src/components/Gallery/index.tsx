@@ -2,8 +2,6 @@ import { useState } from 'react'
 
 import Section from '../Section'
 
-import { GalleryItem } from '../../pages/Home'
-
 import * as S from './styles'
 
 import play from '../../assets/images/play.png'
