@@ -54,11 +54,11 @@ const Checkout = () => {
         .min(5, 'O nome precisa ter pelo menos 5 caracteres')
         .required('O campo é obrigatório'),
       email: Yup.string()
-        .min(14, 'O campo precisa ter 14 caractéres')
-        .max(14, 'O campo precisa ter 14 caractéres')
+        .email('E-mail inválido')
         .required('O campo é obrigatório'),
       cpf: Yup.string()
-        .email('E-mail inválido')
+        .min(14, 'O campo precisa ter 14 caracteres')
+        .max(15, 'O campo precisa ter 14 caracteres')
         .required('O campo é obrigatório'),
       deliveryEmail: Yup.string()
         .email('E-mail inválido')
@@ -93,7 +93,6 @@ const Checkout = () => {
       )
     }),
     onSubmit: (values) => {
-      console.log(values)
       purchase({
         billing: {
           document: values.cpf,
@@ -108,7 +107,7 @@ const Checkout = () => {
           card: {
             active: payWithCard,
             code: Number(values.cardCode),
-            name: values.cardOwner,
+            name: values.cardDisplayName,
             number: values.cardNumber,
             owner: {
               document: values.cpfCardOwner,
@@ -438,7 +437,9 @@ const Checkout = () => {
             <Button
               title="Clique aqui para finalizar a compra"
               type="submit"
-              onClick={form.handleSubmit}
+              onClick={() => {
+                form.handleSubmit
+              }}
               disabled={isLoading}
             >
               {isLoading ? 'Finalizando compra...' : 'Finalizar Compra'}
